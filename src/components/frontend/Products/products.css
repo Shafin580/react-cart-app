@@ -1,0 +1,14 @@
+.card-c{
+    width: 18rem;
+}
+
+.card-text{
+    color: green;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card-title{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
