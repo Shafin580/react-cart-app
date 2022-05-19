@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./header.css"
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className='header mb-5'>
         <div>
@@ -18,7 +18,10 @@ const Header = () => {
                 </li>
                 <li>
                     <Link to='/cart' className='cart'>
-                        <i className='fas fa-shopping-cart'></i>
+                        <i className='fas fa-shopping-cart' />
+                        <span className='cart-length'>
+                            {props.cartItems.length === 0 ? "" : props.cartItems.length}
+                        </span>
                     </Link>
                 </li>
             </ul>

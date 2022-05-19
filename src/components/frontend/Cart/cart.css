@@ -1,6 +1,6 @@
 .cart-items{
     margin: 30px auto;
-    width: 50%;
+    width: 80%;
     background-color: orange;
     border: 2px solid black;
     border-radius: 5px;
@@ -61,4 +61,12 @@
 .cart-items-total-price{
     display: flex;
     padding-left: 45%;
+}
+
+.cart-items-add{
+    margin-right: 1rem;
+}
+
+.cart-items-remove{
+    margin-right: 1rem;
 }

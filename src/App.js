@@ -41,11 +41,11 @@ const App = () => {
 
   const handleCartClear = () => {
     setCartItems([]);
-  }
+  };
   return (
     <div>
       <Router>
-        <Header />
+        <Header cartItems={cartItems} />
         <Routes>
           <Route
             exact
@@ -59,9 +59,11 @@ const App = () => {
                       <div className="col-md-4 mb-3">
                         <Products
                           key={product.id}
+                          product={product}
                           name={product.name}
                           price={product.price}
                           image={product.image}
+                          handleAddProduct={handleAddProduct}
                         />
                       </div>
                     );
@@ -71,7 +73,17 @@ const App = () => {
             }
           />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/cart" element={<Cart items={cartItems} />} />
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                items={cartItems}
+                handleCartClear={handleCartClear}
+                handleAddProduct={handleAddProduct}
+                handleRemoveProduct={handleRemoveProduct}
+              />
+            }
+          />
         </Routes>
       </Router>
     </div>
